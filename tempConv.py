@@ -369,7 +369,7 @@ def rea_cel(re):
         c = re * (5/4)
         return c
     else:
-        below_abs("-218\u00b0Re")
+        below_abs("-218\u00b0R\u00e9")
 
 def rea_fah(re):
     """ Takes Reaumur argument and returns Fahrenheit """
@@ -377,7 +377,7 @@ def rea_fah(re):
         f = re * (9/4) + 32
         return f
     else:
-        below_abs("-218\u00b0Re")
+        below_abs("-218\u00b0R\u00e9")
 
 def rea_kel(re):
     """ Takes Reaumur argument and returns Kelvin """
@@ -385,7 +385,7 @@ def rea_kel(re):
         k = re * (5/4) + 273.15
         return k
     else:
-        below_abs("-218\u00b0Re")
+        below_abs("-218\u00b0R\u00e9")
 
 def rea_ran(re):
     """ Takes Reaumur argument and returns Rankine """
@@ -393,7 +393,7 @@ def rea_ran(re):
         r = re * (9/4) + 491.67
         return r
     else:
-        below_abs("-218\u00b0Re")
+        below_abs("-218\u00b0R\u00e9")
 
 def rea_del(re):
     """ Takes Reaumur argument and returns Delisle """
@@ -401,7 +401,7 @@ def rea_del(re):
         de = (80 - re) * (15/8)
         return de
     else:
-        below_abs("-218\u00b0Re")
+        below_abs("-218\u00b0R\u00e9")
 
 def rea_new(re):
     """ Takes Reaumur argument and returns Newton """
@@ -409,7 +409,7 @@ def rea_new(re):
         n = re * (33/80)
         return n
     else:
-        below_abs("-218\u00b0Re")
+        below_abs("-218\u00b0R\u00e9")
 
 def real_rom(re):
     """ Takes Reaumur argument and returns Romer """
@@ -417,7 +417,7 @@ def real_rom(re):
         ro = re * (21/32) + 7.5
         return ro
     else:
-        below_abs("-218\u00b0Re")
+        below_abs("-218\u00b0R\u00e9")
 
 #--------------------------- From Romer --------------------------------------
 
@@ -427,7 +427,7 @@ def rom_cel(ro):
         c = (ro - 7.5) * (40/21)
         return c
     else:
-        below_abs("-135.90\u00b0Ro+")
+        below_abs("-135.90\u00b0R\u00f8")
 
 def rom_fah(ro):
     """ Takes Romer argument and returns Fahrenheit """
@@ -435,7 +435,7 @@ def rom_fah(ro):
         f = (ro - 7.5) * (24/7) + 32
         return f
     else:
-        below_abs("-135.90\u00b0Ro")
+        below_abs("-135.90\u00b0R\u00f8")
 
 def rom_kel(ro):
     """ Takes Romer argument and returns Kelvin """
@@ -443,7 +443,7 @@ def rom_kel(ro):
         k = (ro - 7.5) * (40/21) + 273.15
         return k
     else:
-        below_abs("-135.90\u00b0Ro")
+        below_abs("-135.90\u00b0R\u00f8")
 
 def rom_ran(ro):
     """ Takes Romer argument and returns Rankine """
@@ -451,7 +451,7 @@ def rom_ran(ro):
         r = (ro - 7.5) * (24/7) + 491.67
         return r
     else:
-        below_abs("-135.90\u00b0Ro")
+        below_abs("-135.90\u00b0R\u00f8")
 
 def rom_del(ro):
     """ Takes Romer argument and returns Delisle """
@@ -459,7 +459,7 @@ def rom_del(ro):
         de = (60 - ro) * (20/7)
         return de
     else:
-        below_abs("-135.90\u00b0Ro")
+        below_abs("-135.90\u00b0R\u00f8")
 
 def rom_new(ro):
     """ Takes Romer argument and returns Newton """
@@ -467,7 +467,7 @@ def rom_new(ro):
         n = (ro - 7.5) * (22/35)
         return n
     else:
-        below_abs("-135.90\u00b0Ro")
+        below_abs("-135.90\u00b0R\u00f8")
 
 def rom_rea(ro):
     """ Takes Romer argument and returns Reaumur """
@@ -475,4 +475,4 @@ def rom_rea(ro):
         re = (ro - 7.5) * (32/21)
         return re
     else:
-        below_abs("-135.90\u00b0Ro")
+        below_abs("-135.90\u00b0R\u00f8")
