@@ -10,7 +10,7 @@ init()
 
 def below_abs(temp):
     print(Fore.RED + " Value too low!!!\n" + Fore.RESET,
-          Fore.CYAN + temp,"is absolute zero..." + Fore.RESET)
+          Fore.YELLOW + temp,"is absolute zero..." + Fore.RESET)
 
 #------------------------------- From Celsius --------------------------------
 
@@ -411,7 +411,7 @@ def rea_new(re):
     else:
         below_abs("-218\u00b0R\u00e9")
 
-def real_rom(re):
+def rea_rom(re):
     """ Takes Reaumur argument and returns Romer """
     if re >= -218.52:       # <=== Check to see is re is below absolute zero
         ro = re * (21/32) + 7.5
