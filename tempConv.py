@@ -472,7 +472,7 @@ def rom_new(ro):
 def rom_rea(ro):
     """ Takes Romer argument and returns Reaumur """
     if ro < -135.90:       # <=== Check to see if ro is below absolute zero
-        below_abs("-135.90\u00b0R\u00f8"<
+        below_abs("-135.90\u00b0R\u00f8")
     else:
         re = (ro - 7.5) * (32/21)
         return re
