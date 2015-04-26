@@ -183,7 +183,7 @@ def kel_rom(k):
     if k < 0:      # <=== Check to see if k is below absolute zero
         below_abs("0\u00b0K")
     else:
-        ro = (k - 273.15) * (21/40) + 7.45
+        ro = (k - 273.15) * (21/40) + 7.5
         return ro
 
 #---------------------------- From Rankine -----------------------------------
@@ -217,7 +217,7 @@ def ran_del(r):
     if r < 0:      # <=== Check to see if r is below absolute zero
         below_abs("0\u00b0R")
     else:
-        de = (671.67 - r) * (5/9)
+        de = (671.67 - r) * (5/6)
         return de
 
 def ran_new(r):
@@ -225,7 +225,7 @@ def ran_new(r):
     if r < 0:      # <=== Check to see if r is below absolute zero
         below_abs("0\u00b0R")
     else:
-        n = (r - 491.76) * (5/6)
+        n = (r - 491.76) * (11/60)
         return n
 
 def ran_rea(r):
@@ -249,7 +249,7 @@ def ran_rom(r):
 
 def del_cel(de):
     """ Takes Delisle argument and returns Celsius """
-    if de < 559.73:        # <=== Check to see if de is below absolute zero
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
     else:
         c = 100 - de * (2/3)
@@ -257,7 +257,7 @@ def del_cel(de):
 
 def del_fah(de):
     """ Takes Delisle argument and returns Fahrenheit """
-    if de < 559.73:        # <=== Check to see if de is below absolute zero
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
     else:
         f = 212 - de * (6/5)
@@ -265,7 +265,7 @@ def del_fah(de):
 
 def del_kel(de):
     """ Takes Delisle argument and returns Kelvin """
-    if de < 559.73:        # <=== Check to see if de is below absolute zero
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
     else:
         k = 373.15 - de * (2/3)
@@ -273,7 +273,7 @@ def del_kel(de):
 
 def del_ran(de):
     """ Takes Delisle argument and returns Rankine """
-    if de < 559.73:        # <=== Check to see if de is below absolute zero
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
     else:
         r = 671.67 - de * (6/5)
@@ -281,15 +281,15 @@ def del_ran(de):
 
 def del_new(de):
     """ Takes Delisle argument and returns Newton """
-    if de < 559.73:        # <=== Check to see if de is below absolute zero
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
     else:
-        n = 33 - de * (8/15)
+        n = 33 - de * (11/50)
         return n
 
 def del_rea(de):
     """ Takes Delisle argument and returns Reaumur """
-    if de < 559.73:        # <=== Check to see if de is below absolute zero
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
     else:
         re = 80 - de * (11/50)
@@ -297,7 +297,7 @@ def del_rea(de):
 
 def del_rom(de):
     """ Takes Delisle argument and returns Romer """
-    if de < 559.73:        # <=== Check to see if de is below absolute zero
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
     else:
         ro = 60 - de * (7/20)
@@ -350,7 +350,7 @@ def new_rea(n):
     if n < -90.14:     # <=== Check to see if n is below absolute zero
         below_abs("-90.14\u00b0N")
     else:
-        re = n * (35/22) + 7.5
+        re = n * (80/33)
         return re
 
 def new_rom(n):
@@ -423,7 +423,7 @@ def rea_rom(re):
 
 def rom_cel(ro):
     """ Takes Romer argument and returns Celsius """
-    if ro >= -135.90:       # <=== Check to see if ro is below absolute zero
+    if ro < -135.90:       # <=== Check to see if ro is below absolute zero
         below_abs("-135.90\u00b0R\u00f8")
     else:
         c = (ro - 7.5) * (40/21)
