@@ -26,7 +26,8 @@ def primary_message(where):
 
 def secondary_message(t, unit):
     """ A message for the secondary switch """
-    print(Fore.CYAN + "\n What would you like to convert " + str(t) + "\u00b0" + unit + " into?\n" + Fore.RESET)
+    print(Fore.CYAN + "\n What would you like to convert " + str(t) + "\u00b0"
+          + unit + " into?\n" + Fore.RESET)
     menu("Back")
 
 #-----------------------------------------------------------------------------
@@ -63,7 +64,7 @@ def choice(x, y = 0):
                 return choice        # range and not the same; return choice
                 break
             elif choice == y:
-                print(Fore.RED + "\n Can't convert to the same unit!" +
+                print(Fore.RED + "\n Can't convert to the same unit!\n" +
                       Fore.RESET)
             else:
                 print(Fore.RED + "\n Invalid choice!\n" + Fore.RESET)
