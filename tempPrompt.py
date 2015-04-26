@@ -33,7 +33,7 @@ def secondary_message(t, unit):
 
 def result_message(t, t2, unit, unit2):
     """ Prints the result to the screen """
-    print(Fore.GREEN + "\n\t" + str(round(t, 2)) + "\u00b0" + unit +
+    print(Fore.GREEN + "\n " + str(round(t, 2)) + "\u00b0" + unit +
           Fore.YELLOW +" --> " +
           Fore.GREEN + str(round(t2, 2)) + "\u00b0" + unit2 +
           Fore.RESET)
@@ -63,12 +63,12 @@ def choice(x, y = 0):
                 return choice        # range and not the same; return choice
                 break
             elif choice == y:
-                print(Fore.RED + "\n\tCan't convert to the same unit!" +
+                print(Fore.RED + "\n Can't convert to the same unit!" +
                       Fore.RESET)
             else:
-                print(Fore.RED + "\tInvalid choice!\n" + Fore.RESET)
+                print(Fore.RED + "\n Invalid choice!\n" + Fore.RESET)
         except ValueError:          # <=== If choice is invalid prompt message
-            print(Fore.RED + "\tInvalid input!\n" + Fore.RESET)
+            print(Fore.RED + "\n Invalid input!\n" + Fore.RESET)
 
 #-----------------------------------------------------------------------------
 
@@ -82,7 +82,7 @@ def value_input(unit):
             return value
             break
         except ValueError:
-            print(Fore.RED + "\tInput must be an integer!\n" + Fore.RESET)
+            print(Fore.RED + "\n Input must be an integer!\n" + Fore.RESET)
 
 #-----------------------------------------------------------------------------
 
