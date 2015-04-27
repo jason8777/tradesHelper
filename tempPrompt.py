@@ -70,12 +70,12 @@ def choice(x, y = 0):
                 return choice        # range and not the same; return choice
                 break
             elif choice == y:
-                print(Fore.RED + "\n Can't convert to the same unit!\n" +
+                print(Fore.RED + "\a\n Can't convert to the same unit!\n" +
                       Fore.RESET)
             else:
-                print(Fore.RED + "\n Invalid choice!\n" + Fore.RESET)
+                print(Fore.RED + "\a\n Invalid choice!\n" + Fore.RESET)
         except ValueError:          # <=== If choice is invalid prompt message
-            print(Fore.RED + "\n Invalid input!\n" + Fore.RESET)
+            print(Fore.RED + "\a\n Invalid input!\n" + Fore.RESET)
 
 #-----------------------------------------------------------------------------
 
@@ -89,7 +89,7 @@ def value_input(unit):
             return value
             break
         except ValueError:
-            print(Fore.RED + "\n Input must be an integer!\n" + Fore.RESET)
+            print(Fore.RED + "\a\n Input must be an integer!\n" + Fore.RESET)
 
 #-----------------------------------------------------------------------------
 
