@@ -48,24 +48,25 @@ def secondary_message(t, unit):
             ["Newton", "\u00b0N"],
             ["R\u00e9aumur", "\u00b0F\u00e9"],
             ["R\u00f8mer", "\u00b0\u00f8"],
-            [Fore.RED + "Back" + Fore.RESET,""]
+            [Fore.RED + "Back\n" + Fore.RESET,""]
         ])
 
 #-----------------------------------------------------------------------------
 
 def result_message(t, t2, unit, unit2):
+    from os import system
     """ Prints the result to the screen """
     print(Fore.GREEN + "\n " + str(round(t, 2)) + "\u00b0" + unit +
           Fore.YELLOW +" --> " + Fore.GREEN + Style.BRIGHT +
-          str(round(t2, 2)) + "\u00b0" + unit2 + Style.RESET_ALL)
-
+          str(round(t2, 2)) + "\u00b0" + unit2 + "\n" + Style.RESET_ALL)
+    print(system('pause'))
 #-----------------------------------------------------------------------------
 
 def choice(x, y = 0):
     """ Checks user input """
     while True:
         try:
-            choice = int(input("=(:"))   # <=== Check if it's an int
+            choice = int(input())   # <=== Check if it's an int
             if choice <= x and choice > 0 and choice != y: # <=== If choice in
                 return choice        # range and not the same; return choice
                 break
@@ -85,7 +86,7 @@ def value_input(unit):
           Fore.RESET)
     while True:
         try:
-            value = float(input("=(:")) # <=== Make sure input is a float
+            value = float(input()) # <=== Make sure input is a float
             return value
             break
         except ValueError:
