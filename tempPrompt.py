@@ -1,6 +1,6 @@
 
 
-from colorama import init, Fore
+from colorama import init, Fore, Style
 import tempConv
 
 #============================================================================#
@@ -9,49 +9,55 @@ import tempConv
 
 #-----------------------------------------------------------------------------
 
-def opt(number, symbol, name):
-    """ Prints menu options to screen """
-    print("{0:>3s} {1:<3s}{2:^5s}{3:<15s}"
-          .format(number, symbol, "-->", name))
+def menu(x):
+    """ Takes a list as argument and displays as a menu """
+    for i  in range(len(x)):
+        print("{0:>4s} {1:<3s}{2:^5s}{3:<15}"
+              .format(str(i + 1) + ")", x[i][1], "-->", x[i][0]))
 
 #-----------------------------------------------------------------------------
 
-def primary_message(where):
+def primary_message():
     """ A message for the main switch """
-    print(Fore.CYAN + "\n Select the unit you want to convert", where + "\n" +
+    print(Fore.CYAN + "\n Select the unit you want to convert from:\n" +
           Fore.RESET)
-    menu("Exit")
+    menu([
+            ["Celsius", "\u00b0C"],
+            ["Fahrenheit", "\u00b0F"],
+            ["Kelvin", "\u00b0K"],
+            ["Rankin", "\u00b0R"],
+            ["Delisle", "\u00b0De"],
+            ["Newton", "\u00b0N"],
+            ["R\u00e9aumur", "\u00b0F\u00e9"],
+            ["R\u00f8mer", "\u00b0\u00f8"],
+            [Fore.RED + "Exit\n" + Fore.RESET,""]
+        ])
 
 #-----------------------------------------------------------------------------
 
 def secondary_message(t, unit):
     """ A message for the secondary switch """
-    print(Fore.CYAN + "\n What would you like to convert " + str(t) + "\u00b0"
-          + unit + " into?\n" + Fore.RESET)
-    menu("Back")
+    print(Fore.CYAN + "\n Select the unit you would you like to convert " +
+          str(t) + "\u00b0" + unit + " into:\n" + Fore.RESET)
+    menu([
+            ["Celsius", "\u00b0C"],
+            ["Fahrenheit", "\u00b0F"],
+            ["Kelvin", "\u00b0K"],
+            ["Rankin", "\u00b0R"],
+            ["Delisle", "\u00b0De"],
+            ["Newton", "\u00b0N"],
+            ["R\u00e9aumur", "\u00b0F\u00e9"],
+            ["R\u00f8mer", "\u00b0\u00f8"],
+            [Fore.RED + "Back" + Fore.RESET,""]
+        ])
 
 #-----------------------------------------------------------------------------
 
 def result_message(t, t2, unit, unit2):
     """ Prints the result to the screen """
     print(Fore.GREEN + "\n " + str(round(t, 2)) + "\u00b0" + unit +
-          Fore.YELLOW +" --> " +
-          Fore.GREEN + str(round(t2, 2)) + "\u00b0" + unit2 +
-          Fore.RESET)
-
-#-----------------------------------------------------------------------------
-
-def menu(exit):
-    """ This is the main menu for temp conversions """
-    opt("1)", "\u00b0C", "Celsius")
-    opt("2)", "\u00b0F", "Fahrenheit")
-    opt("3)", "\u00b0K", "Kelvin")
-    opt("4)", "\u00b0R", "Rankine")
-    opt("5)", "\u00b0De", "Delisle")
-    opt("6)", "\u00b0N", "Newton")
-    opt("7)", "\u00b0R\u00e9", "R\u00e9aumur")
-    opt("8)", "\u00b0R\u00f8", "R\u00f8mer")
-    opt("9)", '', Fore.YELLOW + exit + "\n" + Fore.RESET)
+          Fore.YELLOW +" --> " + Fore.GREEN + Style.BRIGHT +
+          str(round(t2, 2)) + "\u00b0" + unit2 + Style.RESET_ALL)
 
 #-----------------------------------------------------------------------------
 
@@ -100,12 +106,10 @@ def value_check(unit, value):
 
 #-----------------------------------------------------------------------------
 
-def main_switch():
+def main():
     """" This is the main function """
-    init()
-
     while True:
-        primary_message("from:")        # <=== Display menu and take input
+        primary_message()        # <=== Display menu and take input
         x = choice(9)
         z = tempConv
 
@@ -417,4 +421,6 @@ def main_switch():
 
 #-----------------------------------------------------------------------------
 
-main_switch()
+if __name__ == "__main__":
+    init()
+    main()
