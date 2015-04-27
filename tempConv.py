@@ -9,7 +9,7 @@ init()
 #------------------------------ Warning Functions ----------------------------
 
 def below_abs(temp):
-    print(Fore.RED + "\n Value too low!!!\n" + Fore.RESET,
+    print(Fore.RED + "\a\n Value too low!!!\n" + Fore.RESET,
           Fore.YELLOW + temp,"is absolute zero..." + Fore.RESET)
 
 #------------------------------- From Celsius --------------------------------
