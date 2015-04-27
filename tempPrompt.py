@@ -59,7 +59,7 @@ def choice(x, y = 0):
     """ Checks user input """
     while True:
         try:
-            choice = int(input(">>>"))   # <=== Check if it's an int
+            choice = int(input("=(:"))   # <=== Check if it's an int
             if choice <= x and choice > 0 and choice != y: # <=== If choice in
                 return choice        # range and not the same; return choice
                 break
@@ -79,7 +79,7 @@ def value_input(unit):
           Fore.RESET)
     while True:
         try:
-            value = float(input(">>>")) # <=== Make sure input is a float
+            value = float(input("=(:")) # <=== Make sure input is a float
             return value
             break
         except ValueError:
