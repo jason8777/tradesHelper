@@ -250,56 +250,77 @@ def ran_rom(r):
 
 def del_cel(de):
     """ Takes Delisle argument and returns Celsius """
-    if de < -559.73:        # <=== Check to see if de is below absolute zero
+    if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
+        print(Fore.YELLOW +
+              " Note: \u00b0De, works the in the opposite direction of the",
+               " others." + Fore.RESET)
     else:
         c = 100 - de * (2/3)
         return c
 
 def del_fah(de):
     """ Takes Delisle argument and returns Fahrenheit """
-    if de < -559.73:        # <=== Check to see if de is below absolute zero
+    if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
+        print(Fore.YELLOW +
+              " Note: \u00b0De, works the in the opposite direction of the",
+               " others." + Fore.RESET)
     else:
         f = 212 - de * (6/5)
         return f
 
 def del_kel(de):
     """ Takes Delisle argument and returns Kelvin """
-    if de < -559.73:        # <=== Check to see if de is below absolute zero
+    if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
+        print(Fore.YELLOW +
+              " Note: \u00b0De, works the in the opposite direction of the",
+               " others." + Fore.RESET)
     else:
         k = 373.15 - de * (2/3)
         return k
 
 def del_ran(de):
     """ Takes Delisle argument and returns Rankine """
-    if de < -559.73:        # <=== Check to see if de is below absolute zero
+    if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
+        print(Fore.YELLOW +
+              " Note: \u00b0De, works the in the opposite direction of the",
+               " others." + Fore.RESET)
     else:
         r = 671.67 - de * (6/5)
         return r
 
 def del_new(de):
     """ Takes Delisle argument and returns Newton """
-    if de < -559.73:        # <=== Check to see if de is below absolute zero
+    if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
+        print(Fore.YELLOW +
+              " Note: \u00b0De, works the in the opposite direction of the",
+               " others." + Fore.RESET)
     else:
         n = 33 - de * (11/50)
         return n
 
 def del_rea(de):
     """ Takes Delisle argument and returns Reaumur """
-    if de < -559.73:        # <=== Check to see if de is below absolute zero
+    if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
+        print(Fore.YELLOW +
+              " Note: \u00b0De, works the in the opposite direction of the",
+               " others." + Fore.RESET)
     else:
         re = 80 - de * (11/50)
         return re
 
 def del_rom(de):
     """ Takes Delisle argument and returns Romer """
-    if de < -559.73:        # <=== Check to see if de is below absolute zero
+    if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
+        print(Fore.YELLOW +
+              " Note: \u00b0De, works the in the opposite direction of the",
+               " others." + Fore.RESET)
     else:
         ro = 60 - de * (7/20)
         return ro
