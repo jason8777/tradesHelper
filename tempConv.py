@@ -1,5 +1,5 @@
 from colorama import init, Fore
-
+from winsound import Beep
 init()
 
 #============================================================================#
@@ -9,7 +9,8 @@ init()
 #------------------------------ Warning Functions ----------------------------
 
 def below_abs(temp):
-    print(Fore.RED + "\a\n Value too low!!!\n" + Fore.RESET,
+    Beep(800, 250)
+    print(Fore.RED + "\n Value too low!!!\n" + Fore.RESET,
           Fore.YELLOW + temp,"is absolute zero..." + Fore.RESET)
 
 #------------------------------- From Celsius --------------------------------
