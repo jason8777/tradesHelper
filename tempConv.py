@@ -250,77 +250,112 @@ def ran_rom(r):
 
 def del_cel(de):
     """ Takes Delisle argument and returns Celsius """
+<<<<<<< HEAD
     if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
         print(Fore.YELLOW +
               " Note: \u00b0De, works the in the opposite direction of the",
                " others." + Fore.RESET)
+=======
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
+        below_abs("-559.73\u00b0De")
+>>>>>>> 0592799dcc35f871f29143253b0c7ca81c3b7f94
     else:
         c = 100 - de * (2/3)
         return c
 
 def del_fah(de):
     """ Takes Delisle argument and returns Fahrenheit """
+<<<<<<< HEAD
     if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
         print(Fore.YELLOW +
               " Note: \u00b0De, works the in the opposite direction of the",
                " others." + Fore.RESET)
+=======
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
+        below_abs("-559.73\u00b0De")
+>>>>>>> 0592799dcc35f871f29143253b0c7ca81c3b7f94
     else:
         f = 212 - de * (6/5)
         return f
 
 def del_kel(de):
     """ Takes Delisle argument and returns Kelvin """
+<<<<<<< HEAD
     if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
         print(Fore.YELLOW +
               " Note: \u00b0De, works the in the opposite direction of the",
                " others." + Fore.RESET)
+=======
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
+        below_abs("-559.73\u00b0De")
+>>>>>>> 0592799dcc35f871f29143253b0c7ca81c3b7f94
     else:
         k = 373.15 - de * (2/3)
         return k
 
 def del_ran(de):
     """ Takes Delisle argument and returns Rankine """
+<<<<<<< HEAD
     if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
         print(Fore.YELLOW +
               " Note: \u00b0De, works the in the opposite direction of the",
                " others." + Fore.RESET)
+=======
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
+        below_abs("-559.73\u00b0De")
+>>>>>>> 0592799dcc35f871f29143253b0c7ca81c3b7f94
     else:
         r = 671.67 - de * (6/5)
         return r
 
 def del_new(de):
     """ Takes Delisle argument and returns Newton """
+<<<<<<< HEAD
     if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
         print(Fore.YELLOW +
               " Note: \u00b0De, works the in the opposite direction of the",
                " others." + Fore.RESET)
+=======
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
+        below_abs("-559.73\u00b0De")
+>>>>>>> 0592799dcc35f871f29143253b0c7ca81c3b7f94
     else:
         n = 33 - de * (11/50)
         return n
 
 def del_rea(de):
     """ Takes Delisle argument and returns Reaumur """
+<<<<<<< HEAD
     if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
         print(Fore.YELLOW +
               " Note: \u00b0De, works the in the opposite direction of the",
                " others." + Fore.RESET)
+=======
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
+        below_abs("-559.73\u00b0De")
+>>>>>>> 0592799dcc35f871f29143253b0c7ca81c3b7f94
     else:
         re = 80 - de * (11/50)
         return re
 
 def del_rom(de):
     """ Takes Delisle argument and returns Romer """
+<<<<<<< HEAD
     if de > 559.73:        # <=== Check to see if de is below absolute zero
         below_abs("559.73\u00b0De")
         print(Fore.YELLOW +
               " Note: \u00b0De, works the in the opposite direction of the",
                " others." + Fore.RESET)
+=======
+    if de < -559.73:        # <=== Check to see if de is below absolute zero
+        below_abs("-559.73\u00b0De")
+>>>>>>> 0592799dcc35f871f29143253b0c7ca81c3b7f94
     else:
         ro = 60 - de * (7/20)
         return ro
