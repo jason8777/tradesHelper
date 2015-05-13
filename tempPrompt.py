@@ -1,5 +1,4 @@
 
-from winsound import Beep
 from colorama import init, Fore, Style
 import tempConv
 
@@ -71,14 +70,11 @@ def choice(x, y = 0):
                 return choice        # range and not the same; return choice
                 break
             elif choice == y:
-                Beep(800, 250)
                 print(Fore.RED + "\n Can't convert to the same unit!\n" +
                       Fore.RESET)
             else:
-                Beep(800, 250)
                 print(Fore.RED + "\n Invalid choice!\n" + Fore.RESET)
         except ValueError:          # <=== If choice is invalid prompt message
-            Beep(800, 250)
             print(Fore.RED + "\n Invalid input!\n" + Fore.RESET)
 
 #-----------------------------------------------------------------------------
@@ -93,7 +89,6 @@ def value_input(unit):
             return value
             break
         except ValueError:
-            Beep(800, 200)
             print(Fore.RED + "\n Input must be an integer!\n" + Fore.RESET)
 
 #-----------------------------------------------------------------------------
@@ -107,7 +102,6 @@ def value_check(unit, value):
                 return t
                 break
         except ValueError:
-            Beep(800, 250)
             tempConv(t)
 
 #-----------------------------------------------------------------------------
