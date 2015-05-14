@@ -27,8 +27,8 @@ def primary_message():
             ["Rankin", "\u00b0R"],
             ["Delisle", "\u00b0De"],
             ["Newton", "\u00b0N"],
-            ["R\u00e9aumur", "\u00b0F\u00e9"],
-            ["R\u00f8mer", "\u00b0\u00f8"],
+            ["R\u00e9aumur", "\u00b0R\u00e9"],
+            ["R\u00f8mer", "\u00b0R\u00f8"],
             [Fore.RED + "Exit\n" + Fore.RESET,""]
         ])
 
@@ -45,8 +45,8 @@ def secondary_message(t, unit):
             ["Rankin", "\u00b0R"],
             ["Delisle", "\u00b0De"],
             ["Newton", "\u00b0N"],
-            ["R\u00e9aumur", "\u00b0F\u00e9"],
-            ["R\u00f8mer", "\u00b0\u00f8"],
+            ["R\u00e9aumur", "\u00b0R\u00e9"],
+            ["R\u00f8mer", "\u00b0R\u00f8"],
             [Fore.RED + "Back\n" + Fore.RESET,""]
         ])
 
